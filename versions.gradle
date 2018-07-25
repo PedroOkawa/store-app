@@ -1,0 +1,38 @@
+ext.versions = [
+
+        androidXAppCompatVersion: '1.0.0-alpha1',
+        androidXArchitectureVersion: '2.0.0-alpha1',
+        appCompatVersion: '27.1.1',
+        appCompatMultidexVersion: '1.0.3',
+        appCompatConstraintLayoutVersion: '1.1.2',
+        architectureVersion: '1.1.1',
+        architecturePagingVersion: '1.0.0',
+        crashlyticsVersion: '2.9.1',
+        daggerVersion: '2.16',
+        dataBindingVersion: '3.0.0-beta5',
+        dexMakerVersion: '1.4',
+        androidXEspressoVersion: '3.1.0-alpha1',
+        glideVersion: '4.5.0',
+        gsonVersion: '2.8.1',
+        jUnitVersion: '4.12',
+        kotlinExtensionsVersion: '1.0.0-alpha1',
+        loggingOkHttpVersion: '3.9.1',
+        mockitoVersion: '2.8.47',
+        mockitoAndroidVersion: '2.19.0',
+        picassoVersion: '2.5.2',
+        retrofitVersion: '2.3.0',
+        runnerVersion: '1.0.2',
+        rxAndroidVersion: '2.0.1',
+        rxJavaVersion: '2.0.1',
+        rxKotlinVersion: '2.2.0',
+        testEspressoVersion: '3.0.2',
+        testRunnerVersion: '1.0.2',
+        testRulesVersion: '1.0.2',
+        androidXTestVersion: '1.1.0-alpha1',
+
+        // ANDROID CONFIGS
+        compileSdk: 28,
+        targetSdk: 28,
+        minSdk: 19
+
+]
