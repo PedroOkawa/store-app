@@ -1,7 +1,5 @@
 ext.versions = [
 
-        androidXAppCompatVersion: '1.0.0-alpha1',
-        androidXArchitectureVersion: '2.0.0-alpha1',
         appCompatVersion: '27.1.1',
         appCompatMultidexVersion: '1.0.3',
         appCompatConstraintLayoutVersion: '1.1.2',
@@ -11,7 +9,6 @@ ext.versions = [
         daggerVersion: '2.16',
         dataBindingVersion: '3.0.0-beta5',
         dexMakerVersion: '1.4',
-        androidXEspressoVersion: '3.1.0-alpha1',
         glideVersion: '4.5.0',
         gsonVersion: '2.8.1',
         jUnitVersion: '4.12',
@@ -28,11 +25,10 @@ ext.versions = [
         testEspressoVersion: '3.0.2',
         testRunnerVersion: '1.0.2',
         testRulesVersion: '1.0.2',
-        androidXTestVersion: '1.1.0-alpha1',
 
         // ANDROID CONFIGS
         compileSdk: 28,
         targetSdk: 28,
-        minSdk: 19
+        minSdk: 14
 
 ]
