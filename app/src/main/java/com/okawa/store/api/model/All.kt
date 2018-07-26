@@ -1,3 +1,8 @@
 package com.okawa.store.api.model
 
-data class All(val data: Data)
+import com.google.gson.annotations.SerializedName
+
+data class All(
+        @SerializedName("data")
+        val data: Data?
+)

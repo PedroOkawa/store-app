@@ -1,9 +1,13 @@
 package com.okawa.store.repository
 
-import io.reactivex.disposables.Disposable
+import com.okawa.store.data.Result
+import com.okawa.store.ui.model.StoreItemModel
+import io.reactivex.Observable
 
 interface AppsRepository {
 
-    fun listApps() : Disposable
+    fun retrieveStoreItems() : Observable<Result<List<StoreItemModel>>>
+
+    fun dispose()
 
 }

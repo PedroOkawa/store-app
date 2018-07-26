@@ -2,7 +2,7 @@ package com.okawa.store.api.model
 
 import com.google.gson.annotations.SerializedName
 
-data class Data(
-        @SerializedName("list")
-        val list: List<StoreItem>?
+data class DataSets(
+        @SerializedName("all")
+        val all: All
 )

@@ -1,4 +1,4 @@
-package com.okawa.store.ui
+package com.okawa.store.ui.base
 
 import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding
@@ -41,26 +41,11 @@ abstract class BaseActivity<T : ViewDataBinding> : AppCompatActivity(), HasSuppo
 
         defineDataBinding()
 
-        if (savedInstanceState == null) {
-            defineInitialFragment()
-        }
-
         doOnCreated()
     }
 
     private fun defineDataBinding() {
         dataBinding = DataBindingUtil.setContentView(this, layoutToInflate())
-    }
-
-    private fun defineInitialFragment() {
-        val initialFragment = initialFragment() ?: return
-
-        if (containerId() != DEFAULT_CONTAINER_ID) {
-            supportFragmentManager
-                    .beginTransaction()
-                    .replace(containerId(), initialFragment)
-                    .commitNow()
-        }
     }
 
 }

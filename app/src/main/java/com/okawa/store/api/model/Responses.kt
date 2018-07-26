@@ -1,3 +1,8 @@
 package com.okawa.store.api.model
 
-data class Responses(val listApps: ListApps)
+import com.google.gson.annotations.SerializedName
+
+data class Responses(
+        @SerializedName("listApps")
+        val listApps: ListApps?
+)
