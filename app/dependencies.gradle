@@ -9,6 +9,7 @@ dependencies {
     implementation libraries.architecture.room
     kapt libraries.architecture.roomCompiler
     implementation libraries.appCompat.base
+    implementation libraries.appCompat.design
     implementation libraries.appCompat.constraintLayout
     implementation libraries.appCompat.recyclerView
 
@@ -34,6 +35,11 @@ dependencies {
     /* RETROFIT */
     implementation libraries.retrofit.base
     implementation libraries.retrofit.gsonConverter
+    implementation libraries.retrofit.rxAdapter
+
+    /* RX JAVA */
+    implementation libraries.rx.android
+    implementation libraries.rx.kotlin
 
     /** TESTS **/
 

@@ -15,7 +15,7 @@ android {
             versionCode 1
             versionName "0.0.1"
 
-            buildConfigField "String", "API_URL", "\"http://ws2.aptoide.com/api/\""
+            buildConfigField "String", "API_URL", "\"http://ws2.aptoide.com/api/6/bulkRequest/api_list/\""
         }
 
         prod {
@@ -23,7 +23,7 @@ android {
             versionCode 1
             versionName "1.0.0"
 
-            buildConfigField "String", "API_URL", "\"http://ws2.aptoide.com/api/\""
+            buildConfigField "String", "API_URL", "\"http://ws2.aptoide.com/api/6/bulkRequest/api_list/\""
         }
     }
 }

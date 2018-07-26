@@ -83,7 +83,8 @@ ext.libraries = [
 
         retrofit : [
                 base                    : "com.squareup.retrofit2:retrofit:$versions.retrofitVersion",
-                gsonConverter           : "com.squareup.retrofit2:converter-gson:$versions.retrofitVersion"
+                gsonConverter           : "com.squareup.retrofit2:converter-gson:$versions.retrofitVersion",
+                rxAdapter               : "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofitVersion"
         ],
 
         rx : [
