@@ -32,22 +32,12 @@ ext.libraries = [
                 supportV4               : "com.android.support:support-v4:$versions.appCompatVersion"
         ],
 
-        crashlytics : [
-                base                    : "com.crashlytics.sdk.android:crashlytics:$versions.crashlyticsVersion"
-        ],
-
         dagger : [
                 base                    : "com.google.dagger:dagger:$versions.daggerVersion",
                 compiler                : "com.google.dagger:dagger-compiler:$versions.daggerVersion",
                 android                 : "com.google.dagger:dagger-android:$versions.daggerVersion",
                 androidProcessor        : "com.google.dagger:dagger-android-processor:$versions.daggerVersion",
                 androidSupport          : "com.google.dagger:dagger-android-support:$versions.daggerVersion"
-        ],
-
-        dataBinding : [
-                adapters                : "com.android.databinding:adapters:$versions.dataBindingVersion",
-                base                    : "com.android.databinding:library:$versions.dataBindingVersion",
-                compiler                : "com.android.databinding:compiler:$versions.dataBindingVersion"
         ],
 
         dexMaker : [
@@ -70,8 +60,7 @@ ext.libraries = [
         ],
 
         kotlin : [
-                base                    : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
-                extensions              : "androidx.core:core-ktx:$versions.kotlinExtensionsVersion"
+                base                    : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
         ],
 
         mockito : [
