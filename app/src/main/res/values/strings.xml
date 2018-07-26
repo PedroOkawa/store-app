@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Store</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_stores">Stores</string>
+    <string name="menu_apps">Apps</string>
+
 </resources>

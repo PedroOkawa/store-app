@@ -4,7 +4,7 @@ import com.okawa.store.data.Result
 import com.okawa.store.ui.model.StoreItemModel
 import io.reactivex.Observable
 
-interface MainPresenter {
+interface HomePresenter {
 
     fun retrieveApps() : Observable<Result<List<StoreItemModel>>>
 
