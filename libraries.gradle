@@ -45,6 +45,8 @@ ext.libraries = [
         ],
 
         dataBinding : [
+                adapters                : "com.android.databinding:adapters:$versions.dataBindingVersion",
+                base                    : "com.android.databinding:library:$versions.dataBindingVersion",
                 compiler                : "com.android.databinding:compiler:$versions.dataBindingVersion"
         ],
 

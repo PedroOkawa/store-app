@@ -4,10 +4,6 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     /* GOOGLE */
-    implementation libraries.architecture.lifecycle
-    implementation libraries.architecture.paging
-    implementation libraries.architecture.room
-    kapt libraries.architecture.roomCompiler
     implementation libraries.appCompat.base
     implementation libraries.appCompat.design
     implementation libraries.appCompat.constraintLayout
@@ -20,8 +16,14 @@ dependencies {
     kapt libraries.dagger.compiler
     kapt libraries.dagger.androidProcessor
 
+    /* DATA BINDING */
+    implementation libraries.dataBinding.adapters
+    implementation libraries.dataBinding.base
+    kapt libraries.dataBinding.compiler
+
     /* GLIDE */
-    implementation libraries.glide.base
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    //implementation libraries.glide.base
 
     /* GSON */
     implementation libraries.gson.base
