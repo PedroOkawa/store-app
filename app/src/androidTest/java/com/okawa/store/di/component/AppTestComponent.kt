@@ -1,10 +1,11 @@
 package com.okawa.store.di.component
 
 import android.app.Application
-import com.okawa.store.App
+import com.okawa.store.AppTest
 import com.okawa.store.di.module.ActivityBuilderModule
 import com.okawa.store.di.module.ApiModule
-import com.okawa.store.di.module.UtilsModule
+import com.okawa.store.di.module.UtilsTestModule
+import com.okawa.store.suite.HomeFragmentTest
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector
@@ -14,20 +15,22 @@ import javax.inject.Singleton
 @Singleton
 @Component(modules = [
     ActivityBuilderModule::class,
-    ApiModule::class,
     AndroidSupportInjectionModule::class,
-    UtilsModule::class
+    ApiModule::class,
+    UtilsTestModule::class
 ])
-interface AppComponent : AndroidInjector<App> {
+interface AppTestComponent : AndroidInjector<AppTest> {
 
     @Component.Builder
     interface Builder {
         @BindsInstance
         fun application(application: Application): Builder
 
-        fun build(): AppComponent
+        fun build(): AppTestComponent
     }
 
-    override fun inject(app: App)
+    override fun inject(appTest: AppTest)
+
+    fun inject(homeFragmentTest: HomeFragmentTest)
 
 }

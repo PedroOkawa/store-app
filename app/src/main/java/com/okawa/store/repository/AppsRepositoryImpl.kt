@@ -1,16 +1,16 @@
 package com.okawa.store.repository
 
-import com.okawa.store.api.service.ApiService
 import com.okawa.store.data.Result
 import com.okawa.store.mapper.StoreItemMapper
 import com.okawa.store.ui.model.StoreItemModel
+import com.okawa.store.utils.ApiManager
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import io.reactivex.subjects.PublishSubject
 import javax.inject.Inject
 
-class AppsRepositoryImpl @Inject constructor(private val apiService: ApiService, private val storeItemMapper: StoreItemMapper) : BaseRepositoryImpl(), AppsRepository {
+class AppsRepositoryImpl @Inject constructor(private val apiManager: ApiManager, private val storeItemMapper: StoreItemMapper) : BaseRepositoryImpl(), AppsRepository {
 
     private val resultSubject: PublishSubject<Result<List<StoreItemModel>>> = PublishSubject.create()
 
@@ -19,7 +19,7 @@ class AppsRepositoryImpl @Inject constructor(private val apiService: ApiService,
     override fun requestStoreItems() {
         resultSubject.onNext(Result.loading(null))
 
-        request(apiService.listApps()
+        request(apiManager.requestListApps()
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .flatMap { apiResponse ->

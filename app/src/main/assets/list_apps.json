@@ -1,0 +1,193 @@
+{
+  "status": "OK",
+  "responses": {
+    "listApps": {
+      "info": {
+        "status": "OK",
+        "time": {
+          "seconds": 0.073899984359741,
+          "human": "73 milliseconds"
+        }
+      },
+      "datasets": {
+        "all": {
+          "info": {
+            "status": "OK",
+            "time": {
+              "seconds": 0.070621013641357,
+              "human": "70 milliseconds"
+            }
+          },
+          "data": {
+            "total": 784122,
+            "offset": 0,
+            "limit": 25,
+            "next": 31,
+            "hidden": 0,
+            "list": [{
+              "id": 1,
+              "name": "App Editors Choice",
+              "package": "com.app.editors",
+              "store_id": 747643,
+              "store_name": "whatever",
+              "vername": "4.41.1.901",
+              "vercode": 1021516,
+              "md5sum": "19f4d193252e1b884cb73356e6fc8249",
+              "apk_tags": [],
+              "size": 72733617,
+              "downloads": 3402164,
+              "pdownloads": 3402164,
+              "added": "2011-01-23 15:07:19",
+              "modified": "2018-07-26 17:16:47",
+              "updated": "2018-07-27 17:54:43",
+              "rating": 5.0,
+              "icon": "http://pool.img.aptoide.com/eduardoatore123455/7d369c2a189f1894fbcc406ce23af635_icon.png",
+              "graphic": "http://pool.img.aptoide.com/eduardoatore123455/f545cf9867d0ce1bf41d7db4df34c2aa.png",
+              "uptype": "aptuploader"
+            }, {
+              "id": 2,
+              "name": "App Editors Choice",
+              "package": "com.app.editors",
+              "store_id": 747643,
+              "store_name": "whatever",
+              "vername": "4.41.1.901",
+              "vercode": 1021516,
+              "md5sum": "19f4d193252e1b884cb73356e6fc8249",
+              "apk_tags": [],
+              "size": 72733617,
+              "downloads": 3402164,
+              "pdownloads": 3402164,
+              "added": "2011-01-23 15:07:19",
+              "modified": "2018-07-26 17:16:47",
+              "updated": "2018-07-27 17:54:43",
+              "rating": 5.0,
+              "icon": "http://pool.img.aptoide.com/eduardoatore123455/7d369c2a189f1894fbcc406ce23af635_icon.png",
+              "graphic": "http://pool.img.aptoide.com/eduardoatore123455/f545cf9867d0ce1bf41d7db4df34c2aa.png",
+              "uptype": "aptuploader"
+            }, {
+              "id": 3,
+              "name": "App Editors Choice",
+              "package": "com.app.editors",
+              "store_id": 747643,
+              "store_name": "whatever",
+              "vername": "4.41.1.901",
+              "vercode": 1021516,
+              "md5sum": "19f4d193252e1b884cb73356e6fc8249",
+              "apk_tags": [],
+              "size": 72733617,
+              "downloads": 3402164,
+              "pdownloads": 3402164,
+              "added": "2011-01-23 15:07:19",
+              "modified": "2018-07-26 17:16:47",
+              "updated": "2018-07-27 17:54:43",
+              "rating": 5.0,
+              "icon": "http://pool.img.aptoide.com/eduardoatore123455/7d369c2a189f1894fbcc406ce23af635_icon.png",
+              "graphic": "http://pool.img.aptoide.com/eduardoatore123455/f545cf9867d0ce1bf41d7db4df34c2aa.png",
+              "uptype": "aptuploader"
+            }, {
+              "id": 4,
+              "name": "App Local Top Apps",
+              "package": "com.app.local",
+              "store_id": 747643,
+              "store_name": "whatever",
+              "vername": "4.41.1.901",
+              "vercode": 1021516,
+              "md5sum": "19f4d193252e1b884cb73356e6fc8249",
+              "apk_tags": [],
+              "size": 72733617,
+              "downloads": 3402164,
+              "pdownloads": 3402164,
+              "added": "2011-01-23 15:07:19",
+              "modified": "2018-07-26 17:16:47",
+              "updated": "2018-07-27 17:54:43",
+              "rating": 5.0,
+              "icon": "http://pool.img.aptoide.com/eduardoatore123455/7d369c2a189f1894fbcc406ce23af635_icon.png",
+              "graphic": null,
+              "uptype": "aptuploader"
+            }, {
+              "id": 5,
+              "name": "App Local Top Apps",
+              "package": "com.app.local",
+              "store_id": 747643,
+              "store_name": "whatever",
+              "vername": "4.41.1.901",
+              "vercode": 1021516,
+              "md5sum": "19f4d193252e1b884cb73356e6fc8249",
+              "apk_tags": [],
+              "size": 72733617,
+              "downloads": 3402164,
+              "pdownloads": 3402164,
+              "added": "2011-01-23 15:07:19",
+              "modified": "2018-07-26 17:16:47",
+              "updated": "2018-07-27 17:54:43",
+              "rating": 5.0,
+              "icon": "http://pool.img.aptoide.com/eduardoatore123455/7d369c2a189f1894fbcc406ce23af635_icon.png",
+              "graphic": null,
+              "uptype": "aptuploader"
+            }, {
+              "id": 6,
+              "name": "App Local Top Apps",
+              "package": "com.app.local",
+              "store_id": 747643,
+              "store_name": "whatever",
+              "vername": "4.41.1.901",
+              "vercode": 1021516,
+              "md5sum": "19f4d193252e1b884cb73356e6fc8249",
+              "apk_tags": [],
+              "size": 72733617,
+              "downloads": 3402164,
+              "pdownloads": 3402164,
+              "added": "2011-01-23 15:07:19",
+              "modified": "2018-07-26 17:16:47",
+              "updated": "2018-07-27 17:54:43",
+              "rating": 5.0,
+              "icon": "http://pool.img.aptoide.com/eduardoatore123455/7d369c2a189f1894fbcc406ce23af635_icon.png",
+              "graphic": null,
+              "uptype": "aptuploader"
+            }, {
+              "id": 7,
+              "name": "App Local Top Apps",
+              "package": "com.app.local",
+              "store_id": 747643,
+              "store_name": "whatever",
+              "vername": "4.41.1.901",
+              "vercode": 1021516,
+              "md5sum": "19f4d193252e1b884cb73356e6fc8249",
+              "apk_tags": [],
+              "size": 72733617,
+              "downloads": 3402164,
+              "pdownloads": 3402164,
+              "added": "2011-01-23 15:07:19",
+              "modified": "2018-07-26 17:16:47",
+              "updated": "2018-07-27 17:54:43",
+              "rating": 5.0,
+              "icon": "http://pool.img.aptoide.com/eduardoatore123455/7d369c2a189f1894fbcc406ce23af635_icon.png",
+              "graphic": null,
+              "uptype": "aptuploader"
+            }, {
+              "id": 8,
+              "name": "App Local Top Apps",
+              "package": "com.app.local",
+              "store_id": 747643,
+              "store_name": "whatever",
+              "vername": "4.41.1.901",
+              "vercode": 1021516,
+              "md5sum": "19f4d193252e1b884cb73356e6fc8249",
+              "apk_tags": [],
+              "size": 72733617,
+              "downloads": 3402164,
+              "pdownloads": 3402164,
+              "added": "2011-01-23 15:07:19",
+              "modified": "2018-07-26 17:16:47",
+              "updated": "2018-07-27 17:54:43",
+              "rating": 5.0,
+              "icon": "http://pool.img.aptoide.com/eduardoatore123455/7d369c2a189f1894fbcc406ce23af635_icon.png",
+              "graphic": null,
+              "uptype": "aptuploader"
+            }]
+          }
+        }
+      }
+    }
+  }
+}
