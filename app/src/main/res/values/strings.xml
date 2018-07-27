@@ -1,9 +1,20 @@
 <resources>
+
+    <!-- APP NAME -->
+
     <string name="app_name">Store</string>
+
+    <!-- MAIN ACTIVITY-->
 
     <string name="menu_home">Home</string>
     <string name="menu_search">Search</string>
     <string name="menu_stores">Stores</string>
     <string name="menu_apps">Apps</string>
+
+    <!-- HOME FRAGMENT -->
+
+    <string name="editors_choice">Editors Choice</string>
+    <string name="local_top_apps">Local Top Apps</string>
+    <string name="more">More</string>
 
 </resources>

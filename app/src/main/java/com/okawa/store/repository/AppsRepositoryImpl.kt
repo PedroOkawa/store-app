@@ -27,8 +27,6 @@ class AppsRepositoryImpl @Inject constructor(private val apiService: ApiService,
                     resultSubject.onNext(Result.error(error.message, null))
                 }))
 
-        resultSubject.onNext(Result.loading(null))
-
         return resultSubject
     }
 

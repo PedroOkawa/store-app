@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ADAPTER EDITORS CHOICE -->
+
+    <dimen name="adapter_editors_choice_content_margin">4dp</dimen>
+
+    <!-- ADAPTER TOP LOCAL APP -->
+
+    <dimen name="adapter_local_top_app_content_margin">4dp</dimen>
+
+    <!-- FRAGMENT HOME -->
+
+    <dimen name="fragment_home_title_margin">18dp</dimen>
+    <dimen name="fragment_home_content_horizontal_padding">14dp</dimen>
+
+    <!-- TEXT SIZES -->
+
+    <dimen name="text_size_headline_one">96sp</dimen>
+    <dimen name="text_size_headline_two">60sp</dimen>
+    <dimen name="text_size_headline_three">48sp</dimen>
+    <dimen name="text_size_headline_four">34sp</dimen>
+    <dimen name="text_size_headline_five">24sp</dimen>
+    <dimen name="text_size_headline_six">20sp</dimen>
+    <dimen name="text_size_subtitle_one">16sp</dimen>
+    <dimen name="text_size_subtitle_two">14sp</dimen>
+    <dimen name="text_size_body_one">16sp</dimen>
+    <dimen name="text_size_body_two">14sp</dimen>
+    <dimen name="text_size_caption">12sp</dimen>
+    <dimen name="text_size_button">14sp</dimen>
+    <dimen name="text_size_over_line">12sp</dimen>
+
+</resources>

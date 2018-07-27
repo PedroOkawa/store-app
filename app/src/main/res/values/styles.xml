@@ -6,5 +6,63 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowBackground">@color/colorAccent</item>
     </style>
+    
+    <style name="AppTheme.HeadlineOne">
+        <item name="android:textSize">@dimen/text_size_headline_one</item>
+    </style>
+
+    <style name="AppTheme.HeadlineTwo">
+        <item name="android:textSize">@dimen/text_size_headline_two</item>
+    </style>
+
+    <style name="AppTheme.HeadlineThree">
+        <item name="android:textSize">@dimen/text_size_headline_three</item>
+    </style>
+
+    <style name="AppTheme.HeadlineFour">
+        <item name="android:textSize">@dimen/text_size_headline_four</item>
+    </style>
+
+    <style name="AppTheme.HeadlineFive">
+        <item name="android:textSize">@dimen/text_size_headline_five</item>
+    </style>
+
+    <style name="AppTheme.HeadlineSix">
+        <item name="android:textSize">@dimen/text_size_headline_six</item>
+    </style>
+
+    <style name="AppTheme.SubtitleOne">
+        <item name="android:textSize">@dimen/text_size_subtitle_one</item>
+    </style>
+
+    <style name="AppTheme.SubtitleTwo">
+        <item name="android:textSize">@dimen/text_size_subtitle_two</item>
+    </style>
+
+    <style name="AppTheme.BodyOne">
+        <item name="android:textSize">@dimen/text_size_body_one</item>
+    </style>
+
+    <style name="AppTheme.BodyTwo">
+        <item name="android:textSize">@dimen/text_size_body_two</item>
+    </style>
+
+    <style name="AppTheme.Caption">
+        <item name="android:textSize">@dimen/text_size_caption</item>
+    </style>
+
+    <style name="AppTheme.Button">
+        <item name="android:textSize">@dimen/text_size_button</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="AppTheme.Button.Primary">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.OverLine">
+        <item name="android:textSize">@dimen/text_size_over_line</item>
+    </style>
 
 </resources>

@@ -5,6 +5,7 @@ dependencies {
 
     /* GOOGLE */
     implementation libraries.appCompat.base
+    implementation libraries.appCompat.cardView
     implementation libraries.appCompat.design
     implementation libraries.appCompat.constraintLayout
     implementation libraries.appCompat.recyclerView

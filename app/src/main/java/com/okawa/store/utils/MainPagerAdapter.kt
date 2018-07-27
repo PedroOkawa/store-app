@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentStatePagerAdapter
 import com.okawa.store.ui.HomeFragment
+import com.okawa.store.ui.MainActivity
 
 class MainPagerAdapter(fragmentManager: FragmentManager) : FragmentStatePagerAdapter(fragmentManager) {
 
@@ -13,7 +14,7 @@ class MainPagerAdapter(fragmentManager: FragmentManager) : FragmentStatePagerAda
 
     override fun getItem(position: Int): Fragment {
         return when(position) {
-            0 -> HomeFragment()
+            MainActivity.PAGE_INDEX_HOME -> HomeFragment()
             else -> Fragment()
         }
     }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="image"
+            type="String"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/adapter_editors_choice_content_margin">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            bind:image="@{image}"/>
+
+    </RelativeLayout>
+
+</layout>

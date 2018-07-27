@@ -1,26 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    
-    <android.support.constraint.ConstraintLayout
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swpHomeContent"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <android.support.constraint.Guideline
-            android:id="@+id/gdlHomeHorizontalCenter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.5"/>
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rclHomeEditorsChoiceContent"
-            android:orientation="horizontal"
+    
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/gdlHomeHorizontalCenter"/>
-        
-    </android.support.constraint.ConstraintLayout>
+            android:layout_height="match_parent">
+
+            <android.support.constraint.Guideline
+                android:id="@+id/gdlHomeHorizontalCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5"/>
+
+            <TextView
+                android:id="@+id/txtHomeEditorsChoiceTitle"
+                style="@style/AppTheme.HeadlineSix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fragment_home_title_margin"
+                android:text="@string/editors_choice"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <Button
+                android:id="@+id/txtHomeEditorsChoiceMore"
+                style="@style/AppTheme.Button.Primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/more"
+                app:layout_constraintTop_toTopOf="@+id/txtHomeEditorsChoiceTitle"
+                app:layout_constraintBottom_toBottomOf="@+id/txtHomeEditorsChoiceTitle"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rclHomeEditorsChoiceContent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:clipToPadding="false"
+                android:paddingStart="@dimen/fragment_home_content_horizontal_padding"
+                android:paddingEnd="@dimen/fragment_home_content_horizontal_padding"
+                app:layout_constraintTop_toBottomOf="@+id/txtHomeEditorsChoiceTitle"
+                app:layout_constraintBottom_toTopOf="@+id/gdlHomeHorizontalCenter"/>
+
+            <TextView
+                android:id="@+id/txtHomeLocalTopAppsTitle"
+                style="@style/AppTheme.HeadlineSix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fragment_home_title_margin"
+                android:text="@string/local_top_apps"
+                app:layout_constraintTop_toTopOf="@+id/gdlHomeHorizontalCenter"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <Button
+                android:id="@+id/txtHomeLocalTopAppsMore"
+                style="@style/AppTheme.Button.Primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/more"
+                app:layout_constraintTop_toTopOf="@+id/txtHomeLocalTopAppsTitle"
+                app:layout_constraintBottom_toBottomOf="@+id/txtHomeLocalTopAppsTitle"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rclHomeLocalTopAppsContent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:clipToPadding="false"
+                android:paddingStart="@dimen/fragment_home_content_horizontal_padding"
+                android:paddingEnd="@dimen/fragment_home_content_horizontal_padding"
+                app:layout_constraintTop_toBottomOf="@+id/txtHomeLocalTopAppsTitle"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 </layout>
