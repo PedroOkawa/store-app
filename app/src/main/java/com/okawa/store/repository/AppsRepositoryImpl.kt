@@ -12,8 +12,12 @@ import javax.inject.Inject
 
 class AppsRepositoryImpl @Inject constructor(private val apiService: ApiService, private val storeItemMapper: StoreItemMapper) : BaseRepositoryImpl(), AppsRepository {
 
-    override fun retrieveStoreItems() : Observable<Result<List<StoreItemModel>>> {
-        val resultSubject: PublishSubject<Result<List<StoreItemModel>>> = PublishSubject.create()
+    private val resultSubject: PublishSubject<Result<List<StoreItemModel>>> = PublishSubject.create()
+
+    override fun retrieveResultObservable(): Observable<Result<List<StoreItemModel>>> = resultSubject
+
+    override fun requestStoreItems() {
+        resultSubject.onNext(Result.loading(null))
 
         request(apiService.listApps()
                 .observeOn(AndroidSchedulers.mainThread())
@@ -26,8 +30,6 @@ class AppsRepositoryImpl @Inject constructor(private val apiService: ApiService,
                 }, { error ->
                     resultSubject.onNext(Result.error(error.message, null))
                 }))
-
-        return resultSubject
     }
 
 }

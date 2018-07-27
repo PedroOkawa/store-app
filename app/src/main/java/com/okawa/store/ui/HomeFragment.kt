@@ -2,7 +2,6 @@ package com.okawa.store.ui
 
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import android.widget.Toast
 import com.okawa.store.R
 import com.okawa.store.data.Result
@@ -13,6 +12,7 @@ import com.okawa.store.ui.base.BaseFragment
 import com.okawa.store.ui.model.StoreItemModel
 import com.okawa.store.utils.EditorsChoiceAdapter
 import com.okawa.store.utils.LocalTopAppsAdapter
+import io.reactivex.functions.Consumer
 import javax.inject.Inject
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
@@ -20,16 +20,28 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     @Inject
     lateinit var homePresenter: HomePresenter
 
+    private val editorsChoiceAdapter = EditorsChoiceAdapter()
+    private val localTopAppsAdapter = LocalTopAppsAdapter()
+
     override fun layoutToInflate() = R.layout.fragment_home
 
     override fun doOnCreated() {
+        initContentView()
         initSwipeRefresh()
+        initResultObserver()
         requestData()
     }
 
-    override fun onDestroy() {
+    override fun onDestroyView() {
         homePresenter.dispose()
-        super.onDestroy()
+        super.onDestroyView()
+    }
+
+    private fun initContentView() {
+        dataBinding.rclHomeEditorsChoiceContent.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
+        dataBinding.rclHomeEditorsChoiceContent.adapter = editorsChoiceAdapter
+        dataBinding.rclHomeLocalTopAppsContent.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
+        dataBinding.rclHomeLocalTopAppsContent.adapter = localTopAppsAdapter
     }
 
     private fun initSwipeRefresh() {
@@ -38,23 +50,33 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         }
     }
 
+    private fun initResultObserver() {
+        homePresenter.retrieveResultObserver(Consumer { result ->
+            handleResult(result)
+        })
+    }
+
     private fun stopSwipeRefresh() {
         dataBinding.swpHomeContent.isRefreshing = false
     }
 
     private fun requestData() {
-        homePresenter.retrieveApps().subscribe { result -> handleResult(result) }
+        homePresenter.requestApps()
     }
 
     private fun handleResult(result: Result<List<StoreItemModel>>) {
         when(result.status) {
-            Status.LOADING -> Log.w("TEST", "LOADING")
+            Status.LOADING -> {
+                //dataBinding.loading = true
+            }
             Status.ERROR -> {
-                Toast.makeText(context, result.message, Toast.LENGTH_SHORT).show()
                 stopSwipeRefresh()
+                //dataBinding.loading = false
+                Toast.makeText(context, result.message, Toast.LENGTH_SHORT).show()
             }
             Status.SUCCESS ->  {
                 stopSwipeRefresh()
+                //dataBinding.loading = false
                 defineEditorsChoiceContent(result.data)
                 defineLocalTopAppsContent(result.data)
             }
@@ -62,24 +84,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     }
 
     private fun defineEditorsChoiceContent(storeItemModels: List<StoreItemModel>?) {
-        val content = storeItemModels?.filter { storeItemModel ->
-            storeItemModel.graphic != null
-        }
-
-        dataBinding.rclHomeEditorsChoiceContent.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
-        val adapter = EditorsChoiceAdapter()
-        adapter.setData(content)
-        dataBinding.rclHomeEditorsChoiceContent.adapter = adapter
+        editorsChoiceAdapter.setData(homePresenter.filterByEditorsChoice(storeItemModels))
     }
 
     private fun defineLocalTopAppsContent(storeItemModels: List<StoreItemModel>?) {
-        val content = storeItemModels?.filter { storeItemModel ->
-            storeItemModel.graphic == null
-        }
-
-        dataBinding.rclHomeLocalTopAppsContent.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
-        val adapter = LocalTopAppsAdapter()
-        adapter.setData(content)
-        dataBinding.rclHomeLocalTopAppsContent.adapter = adapter
+        localTopAppsAdapter.setData(homePresenter.filterByLocalTopApps(storeItemModels))
     }
 }

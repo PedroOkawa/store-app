@@ -10,5 +10,6 @@ class EditorsChoiceAdapter : BaseBindingAdapter<StoreItemModel, AdapterEditorsCh
 
     override fun doOnBindViewHolder(holder: BindingViewHolder<AdapterEditorsChoiceBinding>, item: StoreItemModel?, position: Int) {
         holder.dataBinding?.image = item?.graphic
+        holder.dataBinding?.name = item?.name
     }
 }

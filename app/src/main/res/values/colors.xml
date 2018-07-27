@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FF8749</color>
-    <color name="colorPrimaryDark">#FF4630</color>
-    <color name="colorAccent">#F6F5F5</color>
+
+    <!-- THEME -->
+
+    <color name="colorPrimary">@color/colorOrangeFF8749</color>
+    <color name="colorPrimaryDark">@color/colorOrangeFF4630</color>
+    <color name="colorAccent">@color/colorOrangeFF600D</color>
+
+    <color name="colorWindowBackground">@color/colorGreyF6F5F5</color>
+
+    <color name="colorProgressBackground">@color/colorWhiteFFFFFF</color>
+
+    <color name="colorShadowStart">@color/colorBlack484848</color>
+    <color name="colorShadowCenter">@color/colorBlack484848</color>
+    <color name="colorShadowEnd">@color/colorTransparent</color>
+
+    <color name="colorTransparent">#00000000</color>
+
+    <!-- BASE COLORS -->
+
+    <color name="colorBlack484848">#484848</color>
+
+    <color name="colorGreyF6F5F5">#F6F5F5</color>
+
+    <color name="colorOrangeFF8749">#FF8749</color>
+    <color name="colorOrangeFF4630">#FF4630</color>
+    <color name="colorOrangeFF600D">#FF600D</color>
+
+    <color name="colorWhiteFFFFFF">#FFFFFF</color>
+
 </resources>

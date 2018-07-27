@@ -6,7 +6,9 @@ import io.reactivex.Observable
 
 interface AppsRepository {
 
-    fun retrieveStoreItems() : Observable<Result<List<StoreItemModel>>>
+    fun retrieveResultObservable() : Observable<Result<List<StoreItemModel>>>
+
+    fun requestStoreItems()
 
     fun dispose()
 
