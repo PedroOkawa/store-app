@@ -10,7 +10,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="?attr/actionBarSize"
-            android:background="@drawable/background_toolbar"/>
+            android:background="@drawable/background_toolbar">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_logo"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/activity_main_account_icon_margin_end"
+                android:layout_marginRight="@dimen/activity_main_account_icon_margin_end"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_account" />
+
+        </RelativeLayout>
 
         <com.okawa.store.widget.NonSwipeableViewPager
             android:id="@+id/nswMainContent"

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- ACTIVITY MAIN -->
+
+    <dimen name="activity_main_account_icon_margin_end">20dp</dimen>
+
     <!-- ADAPTER EDITORS CHOICE -->
 
     <dimen name="adapter_editors_choice_content_margin">4dp</dimen>
