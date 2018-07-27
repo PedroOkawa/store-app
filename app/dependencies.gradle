@@ -59,4 +59,5 @@ dependencies {
 
     // MOCKITO
     androidTestImplementation libraries.mockito.android
+    testImplementation libraries.mockito.android
 }
