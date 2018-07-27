@@ -33,5 +33,27 @@ class StoreItemMapper @Inject constructor() {
 
         return result
     }
+    
+    fun convert(storeItem: StoreItem?) : StoreItemModel? {
+        return StoreItemModel(
+                storeItem?.id,
+                storeItem?.name,
+                storeItem?.packageName,
+                storeItem?.storeId,
+                storeItem?.storeName,
+                storeItem?.versionName,
+                storeItem?.versionCode,
+                storeItem?.md5sum,
+                storeItem?.apkTags,
+                storeItem?.downloads,
+                storeItem?.pDownloads,
+                storeItem?.added,
+                storeItem?.modified,
+                storeItem?.updated,
+                storeItem?.rating,
+                storeItem?.icon,
+                storeItem?.graphic,
+                storeItem?.uptype)
+    }
 
 }

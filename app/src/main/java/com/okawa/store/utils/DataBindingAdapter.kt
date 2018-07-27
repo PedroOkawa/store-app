@@ -28,8 +28,9 @@ object DataBindingAdapter {
     @JvmStatic
     @BindingAdapter("bind:applyColor")
     fun applyColor(textView: TextView, apply: Boolean) {
-        apply ?: return
-        textView.applyColorOnDrawable()
+        if(apply) {
+            textView.applyColorOnDrawable()
+        }
     }
 
 }
