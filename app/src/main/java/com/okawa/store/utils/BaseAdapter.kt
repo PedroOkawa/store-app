@@ -11,9 +11,8 @@ abstract class BaseAdapter<T, VH : RecyclerView.ViewHolder> :  RecyclerView.Adap
     }
 
     fun setData(data: Collection<T>?) {
-        data?:return
-        this.data.clear()
-        this.data.addAll(data)
+        reset()
+        this.data.addAll(data?:return)
         notifyDataSetChanged()
     }
 

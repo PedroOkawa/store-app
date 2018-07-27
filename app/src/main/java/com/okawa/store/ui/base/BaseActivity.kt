@@ -14,10 +14,6 @@ import javax.inject.Inject
 
 abstract class BaseActivity<T : ViewDataBinding> : AppCompatActivity(), HasSupportFragmentInjector {
 
-    companion object {
-        const val DEFAULT_CONTAINER_ID = 0
-    }
-
     @Inject
     lateinit var fragmentInjector: DispatchingAndroidInjector<Fragment>
 
@@ -27,9 +23,6 @@ abstract class BaseActivity<T : ViewDataBinding> : AppCompatActivity(), HasSuppo
     abstract fun layoutToInflate(): Int
 
     abstract fun doOnCreated()
-
-    @IdRes
-    open fun containerId() = DEFAULT_CONTAINER_ID
 
     open fun initialFragment(): Fragment? = null
 

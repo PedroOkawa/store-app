@@ -4,6 +4,7 @@ import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.okawa.store.BuildConfig
 import com.okawa.store.api.service.ApiService
+import com.okawa.store.utils.Constants
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -17,13 +18,6 @@ import javax.inject.Singleton
 @Module
 class ApiModule {
 
-    private companion object {
-        const val DATE_FORMAT = "yyyy-MM-dd HH:mm:ss"
-        const val CONNECTION_TIMEOUT = 30L
-        const val READ_TIMEOUT = 30L
-        const val WRITE_TIMEOUT = 30L
-    }
-
     @Singleton
     @Provides
     fun provideLoggingInterceptor() : HttpLoggingInterceptor {
@@ -36,7 +30,7 @@ class ApiModule {
     @Provides
     fun provideGson() : Gson {
         return GsonBuilder()
-                .setDateFormat(DATE_FORMAT)
+                .setDateFormat(Constants.Api.DATE_FORMAT)
                 .create()
     }
 
@@ -45,9 +39,9 @@ class ApiModule {
     fun provideOkHttpClient(httpLoggingInterceptor: HttpLoggingInterceptor) : OkHttpClient {
         return OkHttpClient.Builder()
                 .addInterceptor(httpLoggingInterceptor)
-                .connectTimeout(CONNECTION_TIMEOUT, TimeUnit.SECONDS)
-                .readTimeout(READ_TIMEOUT, TimeUnit.SECONDS)
-                .writeTimeout(WRITE_TIMEOUT, TimeUnit.SECONDS)
+                .connectTimeout(Constants.Api.CONNECTION_TIMEOUT, TimeUnit.SECONDS)
+                .readTimeout(Constants.Api.READ_TIMEOUT, TimeUnit.SECONDS)
+                .writeTimeout(Constants.Api.WRITE_TIMEOUT, TimeUnit.SECONDS)
                 .build()
     }
 

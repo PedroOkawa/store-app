@@ -5,18 +5,29 @@
 
     <dimen name="activity_main_account_icon_margin_end">20dp</dimen>
 
+    <!-- ADAPTER -->
+
+    <dimen name="adapter_content_margin">4dp</dimen>
+    <dimen name="adapter_content_corner_radius">4dp</dimen>
+
     <!-- ADAPTER EDITORS CHOICE -->
 
-    <dimen name="adapter_editors_choice_content_margin">4dp</dimen>
+    <dimen name="adapter_editors_choice_details_padding">8dp</dimen>
+    <dimen name="adapter_rating_drawable_padding">8dp</dimen>
 
     <!-- ADAPTER TOP LOCAL APP -->
 
     <dimen name="adapter_local_top_app_content_margin">4dp</dimen>
+    <dimen name="adapter_local_top_app_image_margin">8dp</dimen>
 
     <!-- FRAGMENT HOME -->
 
     <dimen name="fragment_home_title_margin">18dp</dimen>
     <dimen name="fragment_home_content_horizontal_padding">14dp</dimen>
+
+    <!-- IMAGE VIEW ROUNDED -->
+
+    <dimen name="image_view_rounded_corner_radius">10dp</dimen>
 
     <!-- TEXT SIZES -->
 

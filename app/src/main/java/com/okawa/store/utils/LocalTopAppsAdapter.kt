@@ -10,5 +10,7 @@ class LocalTopAppsAdapter : BaseBindingAdapter<StoreItemModel, AdapterLocalTopAp
 
     override fun doOnBindViewHolder(holder: BindingViewHolder<AdapterLocalTopAppsBinding>, item: StoreItemModel?, position: Int) {
         holder.dataBinding?.image = item?.icon
+        holder.dataBinding?.name = item?.name
+        holder.dataBinding?.rating = if(item?.rating == 0f) Constants.Rating.DEFAULT_RATING else item?.rating.toString()
     }
 }

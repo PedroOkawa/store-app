@@ -1,23 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:bind="http://schemas.android.com/apk/res-auto">
 
     <data>
         <variable
             name="image"
             type="String"/>
+        <variable
+            name="name"
+            type="String"/>
+        <variable
+            name="rating"
+            type="String"/>
     </data>
 
-    <RelativeLayout
+    <android.support.v7.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_margin="@dimen/adapter_local_top_app_content_margin">
+        android:layout_margin="@dimen/adapter_content_margin"
+        app:cardCornerRadius="@dimen/adapter_content_corner_radius">
 
-        <ImageView
+        <android.support.constraint.ConstraintLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            bind:image="@{image}"/>
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/adapter_local_top_app_content_margin">
 
-    </RelativeLayout>
+            <android.support.constraint.Guideline
+                android:id="@+id/gdlLocalTopAppsHorizontalImageEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.7"/>
+
+            <ImageView
+                android:id="@+id/imgLocalTopAppsImage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/adapter_local_top_app_image_margin"
+                android:src="@drawable/ic_placeholder_icon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/gdlLocalTopAppsHorizontalImageEnd"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                bind:image="@{image}"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/imgLocalTopAppsImage"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/imgLocalTopAppsImage"
+                app:layout_constraintEnd_toEndOf="@+id/imgLocalTopAppsImage">
+
+                <TextView
+                    android:id="@+id/txtLocalTopAppsName"
+                    style="@style/AppTheme.HeadlineSix.Dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:text="@{name}"/>
+
+                <TextView
+                    style="@style/AppTheme.SubtitleOne.Dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:drawableStart="@drawable/ic_star"
+                    android:drawableLeft="@drawable/ic_star"
+                    android:drawablePadding="@dimen/adapter_rating_drawable_padding"
+                    android:text="@{rating}"
+                    bind:applyColor="@{true}"/>
+
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
 
 </layout>
